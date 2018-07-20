@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playlist_control"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:visibility="invisible"
+    tools:visibility="visible"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+<Button
+    android:id="@+id/playlist_ctrl_play_all_button"
+    android:layout_width="@dimen/bookmark_width_568"
+    android:layout_height="@dimen/bookmark_height81"
+    android:background="@drawable/button_select"
+    android:text="@string/playall"
+    android:textColor="@color/white"
+    android:textSize="@dimen/title_sp"/>
+</LinearLayout>

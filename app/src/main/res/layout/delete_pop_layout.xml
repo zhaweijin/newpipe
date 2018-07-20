@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cancel_pop_height_333"
+        android:background="@drawable/windowsback"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/cancel_pop_margin_90"
+            android:gravity="center"
+            android:text="@string/deletetip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/cancel_pop_sp_43"/>
+
+        <!--android:layout_marginLeft="420dp"-->
+        <!--android:layout_marginRight="420dp"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cancel_pop_height_88"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="@dimen/cancel_pop_margin_71"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="@dimen/cancel_pop_width_234"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_focus"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_sp"></Button>
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="@dimen/cancel_pop_width_234"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/cancel_pop_margin_39"
+                android:background="@drawable/button_focus"
+                android:text="@string/canceldelete"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_sp"></Button>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

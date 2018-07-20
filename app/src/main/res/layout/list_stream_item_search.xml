@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemRoot"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_imgw267"
+    android:background="@drawable/img_selector"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="@dimen/video_item_search_padding">
+
+    <ImageView
+        android:id="@+id/itemThumbnailView"
+        android:layout_width="@dimen/item_imgw267"
+        android:layout_height="@dimen/item_imgh150"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/list_thumbnail_view_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dummy_thumbnail"
+        tools:ignore="RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/itemDurationView"
+        android:layout_width="@dimen/time_w36"
+        android:layout_height="@dimen/time_h19"
+        android:layout_alignBottom="@id/itemThumbnailView"
+        android:layout_alignRight="@id/itemThumbnailView"
+        android:layout_marginBottom="@dimen/video_item_search_duration_margin"
+        android:layout_marginRight="@dimen/video_item_search_duration_margin"
+        android:background="@color/duration_background_color"
+        android:paddingBottom="@dimen/video_item_search_duration_vertical_padding"
+        android:paddingLeft="@dimen/video_item_search_duration_horizontal_padding"
+        android:paddingRight="@dimen/video_item_search_duration_horizontal_padding"
+        android:paddingTop="@dimen/video_item_search_duration_vertical_padding"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/duration_text_color"
+        android:textSize="@dimen/time_sp_13"
+        tools:ignore="RtlHardcoded"
+        tools:text="1:09:10"/>
+<RelativeLayout
+    android:layout_width="@dimen/item_imgw267"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/itemThumbnailView"
+    android:layout_centerHorizontal="true"
+    android:background="#1D1D1D">
+    <TextView
+        android:id="@+id/itemVideoTitleView"
+        android:layout_width="@dimen/titile_w241"
+        android:layout_height="@dimen/titile_h56"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/fragment_main_margin_2"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/title_sp20"
+        android:textColor="@color/white"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tristique vitae sem vitae blanditLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum" />
+
+    <TextView
+        android:id="@+id/itemUploaderView"
+        android:layout_width="@dimen/titile_w241"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/itemVideoTitleView"
+        android:layout_alignLeft="@+id/itemVideoTitleView"
+        android:layout_marginTop="@dimen/fragment_main_margin_50"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/title_sp16"
+        android:textColor="#9B9B9B"
+        tools:text="Uploader" />
+
+    <TextView
+        android:id="@+id/itemAdditionalDetails"
+        android:layout_width="@dimen/titile_w241"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/itemVideoTitleView"
+        android:layout_alignLeft="@+id/itemVideoTitleView"
+        android:layout_marginBottom="@dimen/fragment_main_margin_2"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/title_sp16"
+        android:textColor="#9B9B9B"
+        tools:text="2 years ago • 10M views" />
+</RelativeLayout>
+</RelativeLayout>

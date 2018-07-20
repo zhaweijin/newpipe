@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/fragment_main_height_27"
+        android:layout_height="@dimen/fragment_main_height_27"
+        android:src="@drawable/mark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/okdeletetip"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_sp20"/>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292929"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <org.schabi.newpipe.views.HiveRecyclerView
+        android:id="@+id/items_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/bookmark_margin100"
+        android:paddingTop="@dimen/bookmark_margin20"
+        tools:listitem="@layout/list_playlist_mini_item"
+        android:layout_marginLeft="@dimen/bookmark_margin38"
+        android:layout_marginRight="@dimen/bookmark_margin38"/>
+
+    <!--ERROR PANEL-->
+    <include
+        android:id="@+id/error_panel"
+        layout="@layout/error_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/bookmark_margin50"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <include
+        android:id="@+id/empty_state_view"
+        layout="@layout/bookmark_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bookmark_height4"
+        android:background="?attr/toolbar_shadow_drawable"
+        android:layout_alignParentTop="true"/>
+
+</RelativeLayout>

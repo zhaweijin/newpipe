@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/fragment_kiosk_margin_13">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_a_kiosk"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginLeft="@dimen/fragment_kiosk_margin_10"
+        android:layout_marginStart="@dimen/fragment_kiosk_margin_10"
+        android:layout_marginTop="@dimen/fragment_kiosk_margin_5"
+        android:layout_marginRight="@dimen/fragment_kiosk_margin_5"
+        android:layout_marginEnd="@dimen/fragment_kiosk_margin_5"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/items_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/select_kiosk_item">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_item_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <!--<com.nirhart.parallaxscroll.views.ParallaxScrollView-->
+    <!--android:id="@+id/detail_main_content"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:visibility="visible"-->
+    <!--app:parallax_factor="1.9">-->
+
+    <!--WRAPPER   全部全部-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--上半部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--左半部分-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- TITLE  视频名字-->
+                <TextView
+                    android:id="@+id/detail_video_title_view01"
+                    android:layout_width="@dimen/fragment_video_detail_dp_667.3"
+                    android:layout_height="@dimen/fragment_video_detail_dp_134"
+                    android:layout_marginLeft="@dimen/fragment_video_detail_dp_66.7"
+                    android:layout_marginTop="@dimen/fragment_video_detail_dp_55"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:maxLines="3"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies ex. Integer sit amet sodales risus. Duis non mi et urna pretium bibendum. Nunc eleifend est quis ipsum porttitor egestas. Sed facilisis, nisl quis eleifend pellentesque, orci metus egestas dolor, at accumsan eros metus quis libero."
+                    android:textSize="@dimen/fragment_video_detail_sp_32" />
+
+                <!--UPLOADER  个人中心-->
+                <LinearLayout
+                    android:id="@+id/detail_uploader_root_layout01"
+                    android:layout_width="@dimen/fragment_video_detail_dp_667.3"
+                    android:layout_height="@dimen/fragment_video_detail_dp_100"
+                    android:layout_marginLeft="@dimen/fragment_video_detail_dp_63.3"
+                    android:layout_marginTop="@dimen/fragment_video_detail_dp_12"
+                    android:background="@drawable/img_selector_btn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/detail_uploader_thumbnail_view01"
+                            android:layout_width="@dimen/fragment_video_detail_dp_80"
+                            android:layout_height="@dimen/fragment_video_detail_dp_80"
+                            android:layout_marginLeft="@dimen/fragment_video_detail_dp_16"
+                            android:layout_marginTop="12dp"
+                            android:contentDescription="@string/detail_uploader_thumbnail_view_description"
+                            android:src="@drawable/buddy"
+                            tools:ignore="RtlHardcoded"/>
+                        <LinearLayout
+                            android:layout_width="@dimen/fragment_video_detail_dp_500"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="@dimen/fragment_video_detail_dp_26.7">
+
+                            <TextView
+                                android:id="@+id/detail_uploader_text_view01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/fragment_video_detail_dp_44.7"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="@dimen/fragment_video_detail_sp_32"
+                                android:textStyle="bold"
+                                android:ellipsize="marquee"
+                                android:fadingEdge="horizontal"
+                                android:singleLine="true"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                tools:ignore="RtlHardcoded"
+                                tools:text="Uploader"/>
+
+                        <!--多少人浏览-->
+                        <TextView
+                            android:id="@+id/detail_view_count_view01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/fragment_video_detail_dp_33"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/fragment_video_detail_dp_6"
+                            android:layout_marginTop="@dimen/fragment_video_detail_dp_6"
+                            android:lines="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="@dimen/fragment_video_detail_sp_16"
+                            tools:ignore="RtlHardcoded"
+                            tools:text="2,816,821,505 views" />
+
+                    </LinearLayout>
+
+                        <!--0628 19:34-->
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginRight="12dp"
+                            android:src="@drawable/subscriber_enter2"/>
+
+                    </LinearLayout>
+
+                <!--按钮-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fragment_video_detail_dp_63.3"
+                    android:layout_marginTop="@dimen/fragment_video_detail_dp_16"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/play_start"
+                        android:layout_width="@dimen/fragment_video_detail_dp_148"
+                        android:layout_height="@dimen/fragment_video_detail_dp_50"
+                        android:background="@drawable/img_selector_btn"
+                        android:padding="0dp"
+                        android:nextFocusLeft="@id/play_start"
+                        android:text="播放"
+                        android:textSize="@dimen/fragment_video_detail_sp_24" />
+
+                    <Button
+                        android:id="@+id/video_add"
+                        android:layout_width="@dimen/fragment_video_detail_dp_148"
+                        android:layout_height="@dimen/fragment_video_detail_dp_50"
+                        android:background="@drawable/img_selector_btn"
+                        android:padding="0dp"
+                        android:layout_marginLeft="@dimen/fragment_video_detail_dp_26.7"
+                        android:text="收藏"
+                        android:nextFocusRight="@id/video_add"
+                        android:textSize="@dimen/fragment_video_detail_sp_24" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--视频图  466.7dp   263.3dp-->
+            <ImageView
+                android:id="@+id/detail_thumbnail_image_view01"
+                android:layout_width="500dp"
+                android:layout_height="263.3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/fragment_video_detail_dp_55"
+                android:background="@android:color/transparent"
+                android:src="@drawable/dummy_thumbnail" />
+
+        </LinearLayout>
+
+        <!-- CONTENT 播放器下面的全部-->
+        <RelativeLayout
+            android:id="@+id/detail_content_root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- TITLE  name-->
+            <FrameLayout
+                android:id="@+id/detail_title_root_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="@dimen/fragment_video_detail_dp_12"
+                android:paddingRight="@dimen/fragment_video_detail_dp_12"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/detail_video_title_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/fragment_video_detail_dp_20"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/fragment_video_detail_dp_8"
+                    android:paddingTop="@dimen/fragment_video_detail_dp_12"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="@dimen/video_item_detail_title_text_size"
+                    tools:ignore="RtlHardcoded"
+                    tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies ex. Integer sit amet sodales risus. Duis non mi et urna pretium bibendum. Nunc eleifend est quis ipsum porttitor egestas. Sed facilisis, nisl quis eleifend pellentesque, orci metus egestas dolor, at accumsan eros metus quis libero." />
+
+                <ImageView
+                    android:id="@+id/detail_toggle_description_view"
+                    android:layout_width="@dimen/fragment_video_detail_dp_15"
+                    android:layout_height="@dimen/fragment_video_detail_dp_15"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginLeft="@dimen/fragment_video_detail_dp_5"
+                    android:src="@drawable/arrow_down"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+            </FrameLayout>
+
+            <!-- LOADING INDICATOR-->
+            <ProgressBar
+                android:id="@+id/loading_progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_title_root_layout"
+                android:layout_marginTop="@dimen/video_item_detail_error_panel_margin"
+                android:indeterminate="true"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <!--ERROR PANEL-->
+            <include
+                android:id="@+id/error_panel"
+                layout="@layout/error_retry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_title_root_layout"
+                android:layout_marginTop="@dimen/video_item_detail_error_panel_margin"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <!--HIDING ROOT-->
+            <LinearLayout
+                android:id="@+id/detail_content_root_hiding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/detail_title_root_layout"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <!--DETAIL 个人中心 -->
+                <RelativeLayout
+                    android:id="@+id/detail_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_video_detail_dp_55"
+                    android:layout_marginLeft="@dimen/fragment_video_detail_dp_12"
+                    android:layout_marginRight="@dimen/fragment_video_detail_dp_12"
+                    android:layout_marginTop="@dimen/fragment_video_detail_dp_6"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <!--UPLOADER  个人中心-->
+                    <LinearLayout
+                        android:id="@+id/detail_uploader_root_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/details_panel"
+                        android:layout_toStartOf="@id/details_panel"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/fragment_video_detail_dp_6">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/detail_uploader_thumbnail_view"
+                            android:layout_width="@dimen/video_item_detail_uploader_image_size"
+                            android:layout_height="@dimen/video_item_detail_uploader_image_size"
+                            android:contentDescription="@string/detail_uploader_thumbnail_view_description"
+                            android:src="@drawable/buddy"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/detail_uploader_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/fragment_video_detail_dp_15"
+                            android:ellipsize="marquee"
+                            android:fadingEdge="horizontal"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="@dimen/video_item_detail_uploader_text_size"
+                            android:textStyle="bold"
+                            tools:ignore="RtlHardcoded"
+                            tools:text="Uploader" />
+
+                        <!--<Button
+                            android:id="@+id/detail_uploader_subscribe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginRight="12dp"
+                            android:text="@string/rss_button_title"
+                            android:textSize="12sp"
+                            android:theme="@style/RedButton"
+                            android:drawableLeft="@drawable/ic_rss_feed_white_24dp"
+                            tools:ignore="RtlHardcoded"
+                            android:visibility="gone"/>-->
+                    </LinearLayout>
+
+                    <!-- VIEW & THUMBS  -->
+                    <!--details_panel 未使用  多少人浏览-->
+                    <RelativeLayout
+                        android:id="@+id/details_panel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="@dimen/fragment_video_detail_dp_6"
+                        android:paddingRight="@dimen/fragment_video_detail_dp_6">
+
+                        <TextView
+                            android:id="@+id/detail_view_count_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/fragment_video_detail_dp_6"
+                            android:layout_marginTop="@dimen/fragment_video_detail_dp_6"
+                            android:lines="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="@dimen/video_item_detail_views_text_size"
+                            tools:ignore="RtlHardcoded"
+                            tools:text="2,816,821,505 views" />
+
+                        <!--赞-->
+                        <ImageView
+                            android:id="@+id/detail_thumbs_up_img_view"
+                            android:layout_width="@dimen/video_item_detail_like_image_width"
+                            android:layout_height="@dimen/video_item_detail_like_image_height"
+                            android:layout_below="@id/detail_view_count_view"
+                            android:contentDescription="@string/detail_likes_img_view_description"
+                            android:src="?attr/thumbs_up"
+                            android:visibility="gone" />
+
+                        <!--赞的数量-->
+                        <TextView
+                            android:id="@+id/detail_thumbs_up_count_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/video_item_detail_like_image_height"
+                            android:layout_below="@id/detail_view_count_view"
+                            android:layout_marginLeft="@dimen/video_item_detail_like_margin"
+                            android:layout_toRightOf="@id/detail_thumbs_up_img_view"
+                            android:gravity="center_vertical"
+                            android:lines="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/video_item_detail_likes_text_size"
+                            android:visibility="gone"
+                            tools:ignore="RtlHardcoded"
+                            tools:text="12M" />
+
+                        <!--不赞-->
+                        <ImageView
+                            android:id="@+id/detail_thumbs_down_img_view"
+                            android:layout_width="@dimen/video_item_detail_like_image_width"
+                            android:layout_height="@dimen/video_item_detail_like_image_height"
+                            android:layout_below="@id/detail_view_count_view"
+                            android:layout_marginLeft="12dp"
+                            android:layout_toRightOf="@id/detail_thumbs_up_count_view"
+                            android:contentDescription="@string/detail_dislikes_img_view_description"
+                            android:src="?attr/thumbs_down"
+                            android:visibility="gone"
+                            tools:ignore="RtlHardcoded" />
+
+                        <!--不赞的数量-->
+                        <TextView
+                            android:id="@+id/detail_thumbs_down_count_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/video_item_detail_like_image_height"
+                            android:layout_below="@id/detail_view_count_view"
+                            android:layout_marginLeft="@dimen/video_item_detail_like_margin"
+                            android:layout_toRightOf="@id/detail_thumbs_down_img_view"
+                            android:gravity="center_vertical"
+                            android:lines="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/video_item_detail_likes_text_size"
+                            android:visibility="gone"
+                            tools:ignore="RtlHardcoded"
+                            tools:text="10K" />
+
+                        <!--已禁用-->
+                        <TextView
+                            android:id="@+id/detail_thumbs_disabled_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/video_item_detail_like_image_height"
+                            android:layout_below="@id/detail_view_count_view"
+                            android:layout_marginLeft="12dp"
+                            android:layout_toRightOf="@id/detail_thumbs_down_img_view"
+                            android:gravity="center_vertical"
+                            android:text="@string/disabled"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="@dimen/video_item_detail_likes_text_size"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            tools:ignore="RtlHardcoded"
+                            tools:visibility="visible" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <!--detail_control_panel 未使用   添入等功能键-->
+                <LinearLayout
+                    android:id="@+id/detail_control_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="6dp"
+                    android:visibility="gone">
+
+                    <!-- CONTROLS -->
+                    <!--添入  detail_controls_playlist_append-->
+                    <TextView
+                        android:id="@+id/detail_controls_playlist_append"
+                        android:layout_width="80dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:contentDescription="@string/append_playlist"
+                        android:drawableTop="?attr/ic_playlist_add"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingTop="6dp"
+                        android:text="@string/controls_add_to_playlist_title"
+                        android:textSize="12sp" />
+
+                    <!--后台播放-->
+                    <TextView
+                        android:id="@+id/detail_controls_background"
+                        android:layout_width="80dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:contentDescription="@string/play_audio"
+                        android:drawableTop="?attr/audio"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingTop="6dp"
+                        android:text="@string/controls_background_title"
+                        android:textSize="12sp" />
+
+                    <!--悬浮窗-->
+                    <TextView
+                        android:id="@+id/detail_controls_popup"
+                        android:layout_width="80dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:contentDescription="@string/open_in_popup_mode"
+                        android:drawableTop="?attr/popup"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingTop="6dp"
+                        android:text="@string/controls_popup_title"
+                        android:textSize="12sp" />
+
+                    <!--下载-->
+                    <TextView
+                        android:id="@+id/detail_controls_download"
+                        android:layout_width="80dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:contentDescription="@string/controls_download_desc"
+                        android:drawableTop="?attr/download"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingTop="6dp"
+                        android:text="@string/download"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <!--DESCRIPTIONS   名称延伸介绍  不会显示-->
+                <LinearLayout
+                    android:id="@+id/detail_description_root_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/detail_upload_date_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="@dimen/video_item_detail_upload_date_text_size"
+                        android:textStyle="bold"
+                        tools:text="Published on Oct 2, 2009" />
+
+                    <TextView
+                        android:id="@+id/detail_description_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="3dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/video_item_detail_description_text_size"
+                        tools:text="Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies ex. Integer sit amet sodales risus. Duis non mi et urna pretium bibendum." />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="?attr/separator_color" />
+
+                </LinearLayout>
+
+
+                <!--NEXT AND RELATED VIDEOS   即将播放-->
+                <LinearLayout
+                    android:id="@+id/detail_related_streams_root_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/fragment_video_detail_dp_60"
+                    android:layout_marginTop="@dimen/fragment_video_detail_dp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/detail_next_stream_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/fragment_video_detail_dp_44.7"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:text="相关推荐"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="@dimen/fragment_video_detail_sp_32"
+                        tools:ignore="RtlHardcoded" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/detail_main_content01"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/detail_related_streams_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/fragment_video_detail_dp_4"
+                            android:orientation="horizontal"
+                            tools:minHeight="@dimen/fragment_video_detail_dp_50"
+                            tools:minWidth="@dimen/fragment_video_detail_dp_50" />
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!--</com.nirhart.parallaxscroll.views.ParallaxScrollView>-->
+
+
+</FrameLayout>

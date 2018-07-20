@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292929">
+    <ProgressBar
+        android:id="@+id/loading_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+    <RelativeLayout
+        android:id="@+id/subscriblayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignStart="@+id/newlayout"
+        android:layout_alignLeft="@+id/newlayout"
+        android:layout_below="@+id/newlayout"
+        android:layout_marginRight="@dimen/fragment_subscription_margin_20"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+        <TextView
+            android:id="@+id/subscribtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subscriber"
+            android:textSize="@dimen/title_sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fragment_subscription_height_1"
+            android:layout_alignBaseline="@+id/subscribtv"
+            android:layout_toEndOf="@+id/subscribtv"
+            android:layout_toRightOf="@+id/subscribtv"
+            android:background="#979797" />
+    <org.schabi.newpipe.views.HiveRecyclerViewSubscription
+        android:id="@+id/items_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/subscribtv"
+        android:scrollbars="none"
+        android:visibility="gone"
+        tools:listitem="@layout/list_channel_item"
+        tools:visibility="visible" />
+    </RelativeLayout>
+    <!--ERROR PANEL-->
+    <include
+        android:id="@+id/error_panel"
+        layout="@layout/error_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/fragment_subscription_margin_50"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <include
+        android:id="@+id/empty_state_view"
+        layout="@layout/list_empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/fragment_subscription_margin_133"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_subscription_height_4"
+        android:background="?attr/toolbar_shadow_drawable"
+        android:layout_alignParentTop="true"/>
+<RelativeLayout
+    android:id="@+id/newlayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/fragment_subscription_height_300"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="@dimen/fragment_subscription_margin_67"
+    android:layout_marginLeft="@dimen/fragment_subscription_margin_67"
+    android:layout_marginTop="@dimen/fragment_subscription_margin_10"
+    android:layout_marginRight="@dimen/fragment_subscription_margin_20"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+    <TextView
+        android:id="@+id/newtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/newthings"
+        android:textSize="@dimen/title_sp"/>
+
+    <org.schabi.newpipe.views.HiveRecyclerViewNew
+        android:id="@+id/newlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/newtv"
+        android:scrollbars="none"
+        tools:visibility="visible"
+        tools:listitem="@layout/list_channel_item"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_subscription_height_1"
+        android:layout_alignBaseline="@+id/newtv"
+        android:layout_toEndOf="@+id/newtv"
+        android:layout_toRightOf="@+id/newtv"
+        android:background="#979797" />
+
+
+</RelativeLayout>
+
+
+
+
+</RelativeLayout>

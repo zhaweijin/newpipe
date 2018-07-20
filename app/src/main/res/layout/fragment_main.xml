@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_main_height_93"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/light_youtube_dark_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btn_find"
+            android:layout_width="@dimen/fragment_main_width_120"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginLeft="@dimen/fragment_main_margin_77"
+            android:layout_marginRight="@dimen/fragment_main_margin_150"
+            android:background="@drawable/btn_focus_mask"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="@dimen/fragment_main_width_27"
+                android:layout_height="@dimen/fragment_main_height_27"
+                android:src="@drawable/find_main_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/fragment_main_margin_4"
+                android:text="@string/find"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_sp" />
+
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/fragment_main_width_170"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/fragment_main_margin_38"
+            android:layout_marginLeft="@dimen/fragment_main_margin_133">
+
+            <TextView
+                android:id="@+id/week"
+                android:layout_width="@dimen/fragment_main_width_66"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/fragment_main_margin_1"
+                android:layout_marginStart="@dimen/fragment_main_margin_1"
+                android:layout_marginTop="@dimen/fragment_main_margin_19"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:textSize="@dimen/time_sp_13" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="@dimen/fragment_main_width_66"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/week"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/week"
+                android:layout_marginBottom="@dimen/fragment_main_margin_28"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:textSize="@dimen/time_sp_13" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="@dimen/fragment_main_width_80"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fragment_main_width_80"
+                android:layout_marginStart="@dimen/fragment_main_width_80"
+                android:textColor="@color/white"
+                android:textSize="@dimen/time_sp_32" />
+        </RelativeLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titlelayout"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/sortButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/sortButtonIcon"
+            android:layout_width="@dimen/bookmark_width_48"
+            android:layout_height="@dimen/bookmark_height28"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/bookmark_margin12"
+            android:layout_marginRight="@dimen/bookmark_margin12"
+            android:src="?attr/filter"
+            tools:ignore="ContentDescription,RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/sortButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bookmark_height50"
+            android:layout_toRightOf="@id/sortButtonIcon"
+            android:gravity="left|center"
+            android:text="@string/title_most_played"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/title_sp15"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded"/>
+    </RelativeLayout>
+
+    <include layout="@layout/playlistall" />
+
+</LinearLayout>

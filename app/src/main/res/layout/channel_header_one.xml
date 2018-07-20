@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/channel_header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/contrast_background_color">
+
+    <ImageView
+        android:id="@+id/channel_background"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/subscrib_background"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:id="@+id/channel_metadata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/channel_banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:fitsSystemWindows="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/channel_banner"
+            android:visibility="gone"
+            tools:ignore="ContentDescription"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/channel_avatar_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="66dp"
+            android:layout_marginTop="76dp"
+            android:src="@drawable/buddy"
+            app:civ_border_color="#ffffff"
+            app:civ_border_width="2dp"
+            tools:ignore="RtlHardcoded"/>
+
+        <!--46.7sp-->
+        <TextView
+            android:id="@+id/channel_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/channel_banner_image"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginTop="83.3dp"
+            android:layout_toRightOf="@+id/channel_avatar_view"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="46.7sp"
+            tools:ignore="RtlHardcoded"
+            tools:text="Lorem ipsum dolor"/>
+
+        <TextView
+            android:id="@+id/channel_subscriber_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/channel_title_view"
+            android:layout_marginLeft="26.7dp"
+            android:layout_toRightOf="@+id/channel_avatar_view"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="20sp"
+            android:visibility="gone"
+            tools:ignore="RtlHardcoded"
+            tools:text="123,141,411 subscribers"
+            tools:visibility="visible"/>
+
+        <Button
+            android:id="@+id/channel_subscribe_button"
+            android:layout_width="234.7dp"
+            android:layout_height="81.3dp"
+            android:alpha="0.5"
+            android:layout_marginTop="26.7dp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@+id/channel_avatar_view"
+            android:text="@string/subscribe_button_title"
+            android:textColor="@color/white"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/play_all"
+            android:layout_width="234.7dp"
+            android:layout_height="81.3dp"
+            android:layout_below="@+id/channel_avatar_view"
+            android:layout_marginTop="26.7dp"
+            android:layout_toRightOf="@+id/channel_subscribe_button"
+            android:alpha="0.5"
+            android:text="全部播放"
+            android:textColor="@color/white"
+            android:textSize="24sp"/>
+    </RelativeLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/channel_metadata">-->
+
+    <!--<include layout="@layout/playlist_control" />-->
+    <!--</LinearLayout>-->
+
+</RelativeLayout>
