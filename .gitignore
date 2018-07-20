@@ -1,0 +1,15 @@
+*.iml
+/.gradle/
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/app/app.iml
+/hiveviewnet/hiveviewnet.iml
+.idea/
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/misc.xml
